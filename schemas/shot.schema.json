@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "purpose",
+      "visual_focus",
+      "subject",
+      "event",
+      "movement",
+      "new_information",
+      "next_reason",
+      "camera",
+      "caption",
+      "sfx",
+      "assets",
+      "start",
+      "end"
+    ],
+    "properties": {
+      "start": {
+        "type": "number",
+        "minimum": 0
+      },
+      "end": {
+        "type": "number",
+        "exclusiveMinimum": 0
+      },
+      "assets": {
+        "type": "array"
+      },
+      "caption": {
+        "type": "array"
+      }
+    }
+  }
+}

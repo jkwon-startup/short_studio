@@ -1,0 +1,29 @@
+{
+  "script_hash": "현재 SCRIPT 해시",
+  "status": "BLOCKED",
+  "candidates": [
+    {
+      "model": "Yuna",
+      "file": null,
+      "pronunciation": null,
+      "intonation": null,
+      "speed": null,
+      "emotion": null,
+      "fatigue": null,
+      "listened": false,
+      "license": "UNVERIFIED"
+    },
+    {
+      "model": "Eddy (한국어(한국))",
+      "file": null,
+      "pronunciation": null,
+      "intonation": null,
+      "speed": null,
+      "emotion": null,
+      "fatigue": null,
+      "listened": false,
+      "license": "UNVERIFIED"
+    }
+  ],
+  "note": "파일 생성 성공은 후보 품질 비교 완료가 아닙니다"
+}

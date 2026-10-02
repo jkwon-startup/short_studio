@@ -1,0 +1,38 @@
+__pycache__/
+*.pyc
+.DS_Store
+.env*
+!.env.example
+
+# 제작 산출물·개인 자료(공개 저장소 제외)
+runs/
+work/
+short/20*/
+short/INDEX.md
+short/.index.lock
+logs/
+.publish-stage/
+
+# 설치 마법사가 만드는 개인 설정·주제 목록·승인 기록
+config/local.json
+config/topics.txt
+config/publish-private-patterns.txt
+
+# 비용 사용량 기록(어댑터가 쓰는 원장)
+usage/
+
+# Claude Code 개인 설정
+.claude/settings.local.json
+
+# 미디어
+*.aiff
+*.wav
+*.mp3
+*.mp4
+*.mov
+*.blend
+*.zip
+
+# 모션 엔진 의존성·출력
+motion/node_modules/
+motion/out/

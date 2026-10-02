@@ -1,0 +1,71 @@
+{
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "tools": {
+    "python3": {
+      "path": "/opt/homebrew/bin/python3",
+      "version": "Python 3.14.6",
+      "exit_code": 0
+    },
+    "node": {
+      "path": "/opt/homebrew/bin/node",
+      "version": "v24.19.0",
+      "exit_code": 0
+    },
+    "ffmpeg": {
+      "path": "/opt/homebrew/bin/ffmpeg",
+      "version": "ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers",
+      "exit_code": 0
+    },
+    "ffprobe": {
+      "path": "/opt/homebrew/bin/ffprobe",
+      "version": "ffprobe version 8.1 Copyright (c) 2007-2026 the FFmpeg developers",
+      "exit_code": 0
+    },
+    "blender": {
+      "path": "/opt/homebrew/bin/blender",
+      "version": "Blender 5.2.1 LTS",
+      "exit_code": 0
+    },
+    "codex": {
+      "path": "/opt/homebrew/bin/codex",
+      "version": "codex-cli 0.154.0",
+      "exit_code": 0
+    }
+  },
+  "disk_free_bytes": 1499609477120,
+  "adapters": {
+    "ffmpeg": "CONNECTED_LOCAL",
+    "blender": "CONNECTED_LOCAL",
+    "macos_say": "CONNECTED_TECHNICAL_ONLY_LICENSE_PENDING",
+    "remotion": "UNCONNECTED",
+    "image_generation": "INTERACTIVE_ONLY_NO_HEADLESS_ADAPTER",
+    "cloud_tts": "UNCONNECTED_NO_COST_APPROVAL",
+    "codex": "NATIVE_RESEARCH_CALL_VERIFIED_GPT56SOL_PERSISTENT_20261002",
+    "viewer_qa": "HUMAN_OBSERVATION_REQUIRED"
+  },
+  "korean_voices": [
+    "Eddy (한국어(한국))      ko_KR",
+    "Flo (한국어(한국))       ko_KR",
+    "Grandma (한국어(한국))   ko_KR",
+    "Grandpa (한국어(한국))   ko_KR",
+    "Reed (한국어(한국))      ko_KR",
+    "Rocko (한국어(한국))     ko_KR",
+    "Sandy (한국어(한국))     ko_KR",
+    "Shelley (한국어(한국))   ko_KR",
+    "Yuna                ko_KR"
+  ],
+  "gpu": [
+    {
+      "sppci_cores": "20",
+      "sppci_model": "Apple M5 Pro"
+    }
+  ],
+  "memory_bytes": "68719476736",
+  "remotion_global": false,
+  "python_tts_packages": {
+    "TTS": false,
+    "kokoro": false,
+    "piper": false,
+    "edge_tts": false
+  }
+}

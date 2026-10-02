@@ -1,0 +1,26 @@
+{
+  "production_id": "example-hook",
+  "mode": "production",
+  "brand": "UNSELECTED",
+  "core_sentence": "사용자가 지정할 핵심 문장",
+  "viewer_question": "사용자가 지정할 질문",
+  "duration": 3,
+  "settings": {
+    "voice_model": "UNSELECTED",
+    "style": "UNSELECTED",
+    "speed": 1.0,
+    "shot_version": "1",
+    "asset_version": "1",
+    "caption_version": "1",
+    "render_version": "1",
+    "tool_versions": {
+      "python": "3.14.6",
+      "ffmpeg": "8.1",
+      "blender": "5.2.1 LTS",
+      "node": "24.19.0",
+      "codex": "0.154.0"
+    }
+  },
+  "stage": "hook3",
+  "note": "예제 계약이며 실제 콘텐츠 아님"
+}

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# autopilot.py 실행 래퍼: Pillow가 있는 Python을 찾는다(config/local.json python_pillow → $SHORT_STUDIO_PY → python3).
+ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
+PY="${SHORT_STUDIO_PY:-}"
+[ -z "$PY" ] && [ -f "$ROOT/config/local.json" ] && PY="$(python3 -c 'import json,sys;print(json.load(open(sys.argv[1])).get("python_pillow") or "")' "$ROOT/config/local.json")"
+[ -z "$PY" ] && PY=python3
+cd "$ROOT" && exec "$PY" scripts/claude_adapters/autopilot.py "$@"

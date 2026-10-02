@@ -1,0 +1,114 @@
+{
+  "purpose": "Claude Code 숏폼 무인 제작 기본값. 실행 중 사용자에게 묻지 않고 이 값으로 결정한다. 사용자가 바꾸면 이 파일만 고친다.",
+  "decided_by": "프로젝트 소유자 대화 결정 + Producer 추천안",
+  "stop_only_when": [
+    "승인된 비용 한도 초과",
+    "인증 만료",
+    "같은 원인·같은 가설의 반복 실행 실패"
+  ],
+  "notify": "Slack 웹훅(SLACK_WEBHOOK_URL). Telegram 금지",
+  "budget_caps_per_short": {
+    "pixverse_images": 12,
+    "pixverse_clips": 4,
+    "elevenlabs_chars": 800
+  },
+  "duration_s": "formats[format].default_duration_s (brief.duration이 우선)",
+  "script": {
+    "skill": ".agents/skills/studio-story/references/narration-writing.md",
+    "approval": "AGENTS.md 자동 진행: Producer 추천안 선택을 사전 승인으로 인정. 사용자가 대본 검토 후 진행을 명시한 제작만 확인 대기.",
+    "length": "공백 포함 약 210자(30초)",
+    "tts_numbers": "tts_text에 숫자 한글 표기",
+    "ad_copy_review": "docs/advertising-creative-standard.md의 타깃 망설임·가치·근거·훅/장면·차별 카피·CTA"
+  },
+  "voice": {
+    "provider": "elevenlabs",
+    "model": "eleven_multilingual_v2",
+    "default_voice": "config/local.json voice.voice_id (설치 마법사에서 지정)",
+    "override": "예약 설정 시 사용자가 voice_id 지정 가능",
+    "fit_to_duration": "기본 atempo=1.0. 넘치면 대본·정보량·호흡 수정 우선. 필요한 조정은 brief.voice_fit.atempo와 reason에 명시하며 실제 청취 검수는 별도. 승인 한도 안의 재생성은 일률 금지하지 않는다.",
+    "quality_priority": "배속 전에 대본/정보량/호흡을 설계. 기존 비용 한도와 provider 승인을 유지하며 실제 발음·억양·피로도 청취가 필요."
+  },
+  "visual": {
+    "targeting": "STP: brief/브랜드 프로필의 핵심 페르소나 1순위(config/local.json persona)",
+    "protagonist_default": "config/local.json persona.protagonist_default, 없으면 brief 대상에 맞춰 Director가 설계",
+    "positioning": "브랜드 포지셔닝(config/local.json persona.positioning 또는 브랜드 자료)",
+    "reference_image": "첫 이미지를 --image 레퍼런스로 이후 인물 컷에 사용",
+    "no_text_in_images": true,
+    "endcard": {
+      "bg": "#FFFFFF",
+      "accent": "#0B4F4A",
+      "wordmark_text": "",
+      "slogan": "",
+      "extra_line": null
+    },
+    "caption_dedup": "엔드카드·제목과 같은 자막은 내레이션 문장으로 대체",
+    "font": "Gmarket Sans (OFL)",
+    "mode": "photoreal_ad",
+    "brand_scope": "인물·STP·엔드카드 기본값은 config/local.json의 브랜드에만 적용. 다른 브랜드는 brief·브랜드 자료로 재설계.",
+    "cinematography": "인물/공간 일관성, 실제 행동, 빛·색·심도·거리/시점, 컷의 인과관계와 주시 대상",
+    "motion_graphics": "내용 목적/사용자 요구 시 전문 모션 기준 적용. 단순 카드/페이드/줌으로 전편을 대체하지 않음."
+  },
+  "storage": "python3 short/save_output.py --id <ID> --tool claude (단계 저장마다)",
+  "human_review": "사용자의 최종 확인 생략은 수용 기록으로 보존하고 재승인 질문을 하지 않음. 독립 현재 영상·음성 실제 관찰 없는 Viewer QA PASS·release 금지.",
+  "creative_direction": {
+    "mode": "photoreal_ad",
+    "selection_source": "DEFAULT",
+    "reason": "사용자 지시: 가능한 실사풍, 영상미·속도감·탁월한 카피의 광고",
+    "policy_version": "2026-10-02-advertising-v1",
+    "policy_reference": "docs/advertising-creative-standard.md",
+    "motion_policy_reference": "docs/motion-design-standard.md",
+    "quality_target": "professional_advertising",
+    "motion_graphics_selection": "USER_REQUEST_OR_CONTENT_NEED",
+    "unavailable_tool_action": "BLOCK_ONLY_AFFECTED_GENERATION_NO_SILENT_GRAPHIC_FALLBACK",
+    "override": "brief.creative_direction이 명시한 사용자 방향을 우선",
+    "motion_policy_version": "2026-10-02-motion-v2"
+  },
+  "audio_creative_policy": "광고 기본 BGM/SFX 계획·실제 스템·사용권·청취. 무음 요청 우선. plan.json에 쓴 소리가 실제 믹스에 없으면 완성됐다고 보고하지 않음.",
+  "blocked_stage_policy": "권리·필수 도구·실제 관찰·정보 부족은 해당 단계만 BLOCKED로 기록하고 나머지 제작·저장은 계속한다. 실행 전체를 멈추는 것은 stop_only_when 3가지뿐이다.",
+  "formats": {
+    "9:16": {
+      "size": [
+        1080,
+        1920
+      ],
+      "default_duration_s": 30,
+      "use": "쇼츠·릴스·틱톡"
+    },
+    "16:9": {
+      "size": [
+        1920,
+        1080
+      ],
+      "default_duration_s": 60,
+      "use": "유튜브 일반·웹·발표"
+    },
+    "1:1": {
+      "size": [
+        1080,
+        1080
+      ],
+      "default_duration_s": 30,
+      "use": "피드"
+    }
+  },
+  "default_format": "9:16",
+  "budget_caps_by_format": {
+    "9:16": {
+      "pixverse_images": 12,
+      "pixverse_clips": 4,
+      "elevenlabs_chars": 800
+    },
+    "16:9": {
+      "pixverse_images": 20,
+      "pixverse_clips": 6,
+      "elevenlabs_chars": 1500
+    },
+    "1:1": {
+      "pixverse_images": 12,
+      "pixverse_clips": 4,
+      "elevenlabs_chars": 800
+    }
+  },
+  "max_shorts_per_day": 3,
+  "max_run_minutes": 90
+}

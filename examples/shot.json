@@ -1,0 +1,22 @@
+[
+  {
+    "id": "shot-01",
+    "purpose": "기술 시험용 공간 관계",
+    "visual_focus": "움직이는 물체 하나",
+    "subject": "시험 구체",
+    "event": "가림 뒤 물체가 나타난다",
+    "movement": "구체 이동",
+    "new_information": "가려진 물체의 위치",
+    "next_reason": "새 위치 확인",
+    "camera": "세로 프레임 고정",
+    "caption": [],
+    "sfx": [],
+    "assets": [
+      "BACKGROUND",
+      "MIDGROUND",
+      "SUBJECT"
+    ],
+    "start": 0,
+    "end": 3
+  }
+]

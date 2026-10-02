@@ -1,0 +1,17 @@
+{
+  "_note": "무인(예약) 제작 세션에만 덧붙이는 권한. 웹 도구와, 프로젝트 밖에 쓰거나 임의 코드를 실행할 수 있는 명령을 막는다. 허용 목록은 .claude/settings.json. Edit 규칙은 Write 등 모든 파일 편집 도구에 적용된다.",
+  "permissions": {
+    "deny": [
+      "WebSearch",
+      "WebFetch",
+      "Bash(cp:*)",
+      "Bash(ffmpeg:*)",
+      "Bash(python3 -m unittest:*)",
+      "Bash(bash scripts/setup/run_scheduled.sh:*)",
+      "Edit(scripts/**)",
+      "Edit(config/**)",
+      "Edit(.claude/**)",
+      "Edit(usage/**)"
+    ]
+  }
+}

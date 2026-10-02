@@ -1,0 +1,8 @@
+[project]
+name = "short-studio"
+version = "0.1.0"
+description = "버전 검수와 부분 복구를 갖춘 로컬 숏폼 제작 실행기"
+requires-python = ">=3.11"
+dependencies = []
+[project.scripts]
+short-studio = "studio.cli:main"

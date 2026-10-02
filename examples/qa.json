@@ -1,0 +1,11 @@
+{
+  "gate": "Viewer QA",
+  "snapshot": "현재 qa-template에서 복사",
+  "status": "BLOCKED",
+  "reviewer": "independent-viewer",
+  "checks": {},
+  "evidence": [],
+  "observed_video": false,
+  "observed_audio": false,
+  "notes": "직접 현재 영상/음성 확인 전 PASS 금지"
+}

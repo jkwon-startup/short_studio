@@ -1,0 +1,7 @@
+{
+  "source": "installed claude-plugins-official/frontend-design/local/skills/frontend-design",
+  "skill_sha256": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3",
+  "license_sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+  "license": "Apache-2.0",
+  "modifications": "None. Original skill and license copied verbatim. Short-form guide is separate."
+}

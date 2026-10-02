@@ -1,0 +1,44 @@
+{
+  "settings": {
+    "voice_model": "UNSELECTED",
+    "style": "UNSELECTED",
+    "speed": 1.0,
+    "shot_version": "1",
+    "asset_version": "1",
+    "caption_version": "1",
+    "render_version": "1",
+    "tool_versions": {
+      "python": "3.14.6",
+      "ffmpeg": "8.1",
+      "blender": "5.2.1 LTS",
+      "node": "24.19.0",
+      "codex": "0.154.0"
+    }
+  },
+  "cost_approval": false,
+  "external_publish": false,
+  "quality_auto_pass": false,
+  "workflow": [
+    "hook3",
+    "prototype8",
+    "single",
+    "qa-improve",
+    "style-variant",
+    "batch3to5",
+    "qa",
+    "scale"
+  ],
+  "global_registration": "REGISTERED_PROJECT_REFERENCES_AND_CHECKPOINT_LINK",
+  "creative_direction": {
+    "mode": "photoreal_ad",
+    "selection_source": "DEFAULT",
+    "reason": "사용자 지시: 가능한 실사풍, 영상미·속도감·탁월한 카피의 광고",
+    "policy_version": "2026-10-02-advertising-v1",
+    "policy_reference": "docs/advertising-creative-standard.md",
+    "motion_policy_reference": "docs/motion-design-standard.md",
+    "quality_target": "professional_advertising",
+    "motion_graphics_selection": "USER_REQUEST_OR_CONTENT_NEED",
+    "unavailable_tool_action": "BLOCK_ONLY_AFFECTED_GENERATION_NO_SILENT_GRAPHIC_FALLBACK",
+    "motion_policy_version": "2026-10-02-motion-v2"
+  }
+}

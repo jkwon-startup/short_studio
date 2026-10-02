@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "id",
+    "kind",
+    "version",
+    "path",
+    "sha256",
+    "dependencies",
+    "settings_hash",
+    "code_hash",
+    "produced_by",
+    "identity"
+  ],
+  "properties": {
+    "kind": {
+      "enum": [
+        "RESEARCH",
+        "FACT",
+        "SCRIPT",
+        "SHOT",
+        "ASSET",
+        "MOTION",
+        "VOICE",
+        "CAPTION",
+        "AUDIO",
+        "VIDEO"
+      ]
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "identity": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  }
+}

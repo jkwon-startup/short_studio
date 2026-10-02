@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -m studio:*)",
+      "Bash(python3 -m unittest:*)",
+      "Bash(python3 scripts/claude_adapters/elevenlabs_tts.py:*)",
+      "Bash(python3 scripts/claude_adapters/test_connections.py:*)",
+      "Bash(python3 scripts/claude_adapters/notify_only.py:*)",
+      "Bash(scripts/claude_adapters/pixverse_image.sh:*)",
+      "Bash(bash scripts/claude_adapters/ap:*)",
+      "Bash(AUTOPILOT_NO_NOTIFY=1 bash scripts/claude_adapters/ap:*)",
+      "Bash(bash scripts/setup/run_scheduled.sh:*)",
+      "Bash(python3 short/save_output.py:*)",
+      "Bash(python3 scripts/claude_adapters/budget.py show:*)",
+      "Bash(ffmpeg:*)",
+      "Bash(ffprobe:*)",
+      "Bash(ls:*)",
+      "Bash(grep:*)",
+      "Bash(cp:*)",
+      "Bash(mkdir:*)",
+      "Edit(work/**)"
+    ]
+  }
+}

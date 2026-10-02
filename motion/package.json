@@ -1,0 +1,15 @@
+{
+  "name": "short-studio-motion",
+  "private": true,
+  "description": "short_studio 모션그래픽 렌더러 (Remotion). 개인·3인 이하 팀 무료, 그 이상은 Remotion Company License 필요",
+  "scripts": {
+    "render": "remotion render"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.532",
+    "@remotion/fonts": "^4.0.532",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "remotion": "^4.0.532"
+  }
+}

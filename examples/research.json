@@ -1,0 +1,21 @@
+{
+  "source": "제공된 로컬 영상 경로",
+  "access_rights": "PENDING",
+  "observation": "NOT_WATCHED",
+  "direct": [],
+  "indirect": [],
+  "inference": [],
+  "analysis": {
+    "Hook": [],
+    "Curiosity": [],
+    "Shot": [],
+    "Visual Focus": [],
+    "Text": [],
+    "Caption": [],
+    "Motion": [],
+    "Transition": [],
+    "Sound": [],
+    "Payoff": []
+  },
+  "status": "BLOCKED"
+}
